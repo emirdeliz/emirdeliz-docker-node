@@ -9,5 +9,4 @@ services:
 
 volumes:
   app-unison-sync:
-    external:
-      name: ${COMPOSE_PROJECT_NAME}-unison-sync
+      name: ${SYNC_NAME}-unison-sync
