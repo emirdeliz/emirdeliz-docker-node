@@ -2,7 +2,8 @@ version: '3'
 services:
   app-service:
     # command: ['sh', 'docker-entrypoint.sh']
-    image: emirdeliz/cpp-opencv:latest
+    image: node:latest:latest
+    platform: linux/arm64/v8
     stdin_open: true
     volumes:
       - app-unison-sync:/home/docker/apps:nocopy
