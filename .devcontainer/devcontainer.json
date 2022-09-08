@@ -24,7 +24,7 @@
 	// "postAttachCommand": "bash",
 
 	// A command string or list of command arguments to run on the
-	"initializeCommand": "cd .devcontainer && echo \"SYNC_NAME=$(basename \"$(dirname \"$PWD\")\" | tr '[:upper:]' '[:lower:]')\" > .env && DOCKER_SYNC_ENV_FILE=.env.docker docker-sync restart -c docker-sync.yml"
+	"initializeCommand": "cd .devcontainer && (echo SYNC_NAME=$(basename $(dirname $PWD) | tr '[:upper:]' '[:lower:]') && cat .env.docker) > .env && docker-sync restart -c docker-sync.yml"
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
