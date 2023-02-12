@@ -13,9 +13,9 @@ options:
   # should be a unique port this sync instance uses on the host to offer the rsync service on (do not use this for unison - not needed there.)
   # sync_host_port: '8787',
   # The image to use for the rsync container. (<sync_strategy>_image)
-  native_osx_image: eugenmayer/unison:2.51.3-4.12.0-ARM64
+  # native_osx_image: eugenmayer/unison:2.51.3-4.12.0-ARM64
 
-  # The image to use for the rsync container. (<sync_strategy>_image)
+  # The image to use for the unison_image container. (<sync_strategy>_image)
   # unison_image: eugenmayer/unison:2.51.3-4.12.0-ARM64
 
   # The image to use for the rsync container. (<sync_strategy>_image)

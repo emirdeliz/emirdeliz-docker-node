@@ -1,12 +1,12 @@
 version: '3'
 services:
   app-service:
-    # command: ['sh', 'docker-entrypoint.sh']
     image: ${DOCKER_IMAGE}
     platform: ${DOCKER_IMAGE_PLATFORM}
     stdin_open: true
     volumes:
       - app-unison-sync:/home/docker/apps:nocopy
+      - ~/.ssh:/root/.ssh
 
 volumes:
   app-unison-sync:
