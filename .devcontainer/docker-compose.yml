@@ -4,6 +4,7 @@ services:
     image: ${DOCKER_IMAGE}
     platform: ${DOCKER_IMAGE_PLATFORM}
     stdin_open: true
+    command: /bin/sh -c "while sleep 1000; do :; done"
     volumes:
       - app-unison-sync:/home/docker/apps:nocopy
       - ~/.ssh:/root/.ssh
